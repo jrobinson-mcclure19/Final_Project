@@ -7,14 +7,10 @@
 using namespace std;
 
 
-void Gofish::StartGame()
-{
-	Deck PlayingCards;
-
-}
+// Vector used to create the card playing deck
 Deck :: Deck()
 {
-	// make deck
+	// makes deck of 52 cards
 	const int NumberOfCards = 52;
 	int deck[NumberOfCards];
 	string ranks[] = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
@@ -25,7 +21,7 @@ Deck :: Deck()
 	for (int i = 0; i < NumberOfCards; i++)
 		deck[i] = i;
 
-	// shuffle deck
+	// shuffles the deck before the game
 	srand(time(0));
 	for (int i = 0; i < NumberOfCards; i++)
 	{
@@ -51,20 +47,33 @@ Deck :: Deck()
 	//	cout << "Card number " << deck[i] << ": " << rank << endl; 
 	}
 }
+
+// function used to start game and hand First Five cards to each player
+void Gofish::StartGame()
+{
+	Deck PlayingCards;
+
+}
+
+// used to shuffle the deck again
 void Deck::shuffle()
 {
 
 }
+// draws (removes) the card from the top of the deck
 void Deck::removeCard()
 {
 
 }
 
-
+// the hand of the player (used as vector)
 Hand::Hand()
 {
 	vector<string> mycards;
+ 
 }
+
+// Used to check hand for any pairs in the begining of each turn
 bool Hand::checkpairs()
 {
 	for(counter < mycards.size(); int counter = 0;counter++)
@@ -78,13 +87,17 @@ bool Hand::checkpairs()
 	}
 	return false;
 }
-void Hand::drawCard()
-{
-	mycards.push_back() = deck[0];
-}
+
+// Used by player to ask what card is in the other players hand
 void Hand::ask(string guess)
 {
 
+}
+// used to draw card when the other player says Go Fish
+void Hand::drawCard()
+{
+	for (int i = 0; i < 1; i++)
+		mycards.push_back(i + 1) = deck[0];
 }
 /*string Card::getSuit()
 {

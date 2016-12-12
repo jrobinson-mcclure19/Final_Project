@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//class used to define the deck
 class Deck
 {
 private:
@@ -16,6 +17,7 @@ public:
 	void removeCard();
 };
 
+// class used to define the hand
 class Hand
 {
 private:
@@ -29,6 +31,7 @@ public:
 	Hand();
 };
 
+// class used to define game and start game
 class Gofish
 {
 private:
@@ -37,6 +40,7 @@ public:
 	void StartGame();
 };
 
+// class used to define cards and their values
 class Card
 {
 private:
